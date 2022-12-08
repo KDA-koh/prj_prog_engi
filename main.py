@@ -18,7 +18,8 @@ def root():
 
 @app.post("/title/")
 def predict(item: Item):
-    return classifier(item.text)
+    output = classifier(item.text)
+    return {"I suggest for your text this title": output}
 
 
 if __name__ == '__main__':
