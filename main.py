@@ -16,7 +16,7 @@ def root():
     return {"message": "texttext"}
 
 
-@app.post("/le/")
+@app.post("/title/")
 def predict(item: Item):
     #output = classifier(item.text)
     #return {"I suggest for your text this title": output}
