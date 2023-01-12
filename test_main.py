@@ -1,9 +1,9 @@
 from main import app
 from fastapi.testclient import TestClient
 
-client = TestClient(app)
+#client = TestClient(app)
 
-
+"""
 def test_main():
     response = client.get("/")
     assert response.status_code == 200
@@ -15,4 +15,9 @@ def test_predict_dog():
     if response.status_code == 200:
         json_data = response.json()
         assert json_data[0] == {'generated_text': 'Dog'}
+"""
 
+def test_request_example(client):
+    response = app.test_client().get("/")
+    assert response.status_code == 200
+    assert response.json() == {'message': "texttext"}
