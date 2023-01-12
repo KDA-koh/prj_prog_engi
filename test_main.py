@@ -26,3 +26,4 @@ def test_predict_dog(client):
     if response.status_code == 200:
         json_data = response.json()
         assert json_data[0] == {'generated_text': 'Dog'}
+        assert json_data[0] == {'generated_text': 'Cat'}
