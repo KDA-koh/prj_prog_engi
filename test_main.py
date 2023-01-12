@@ -1,7 +1,7 @@
 from main import app
 from fastapi.testclient import TestClient
 
-#client = TestClient(app)
+client = app.test_client()
 
 """
 def test_main():
@@ -18,6 +18,6 @@ def test_predict_dog():
 """
 
 def test_request_example(client):
-    response = app.test_client().get("/")
+    response = client.get("/")
     assert response.status_code == 200
     assert response.json() == {'message': "texttext"}
