@@ -22,6 +22,6 @@ def test_request_example(client):
     assert response.status_code == 200
 
 def test_predict_dog(client):
-    response = client.post("/", json={"text": "A young orphan girl adopts a dog, completely unaware that its supposedly a dangerous scientific experiment thats taken refuge on Earth and is now hiding from its creator"})
+    response = client.post("/", text="A young orphan girl adopts a dog, completely unaware that its supposedly a dangerous scientific experiment thats taken refuge on Earth and is now hiding from its creator")
     res = response.get_json()
     assert res == {'generated_text': 'Dog'}
