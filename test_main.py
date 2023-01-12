@@ -1,7 +1,15 @@
 from main import app
 from fastapi.testclient import TestClient
 
-client = app.test_client()
+
+@pytest.fixture()
+def client(app):
+    return app.test_client()
+
+
+@pytest.fixture()
+def runner(app):
+    return app.test_cli_runner()
 
 """
 def test_main():
