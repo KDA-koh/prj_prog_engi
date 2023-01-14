@@ -1,6 +1,6 @@
 # Software Engineering Project
 ## Команда:
-- [Кох Дмитрий](https://github.com/KDA-koh) РИМ-120906 — Тимлид, развертывание приложения на платформе Яндекс.Облако, 
+- [Кох Дмитрий](https://github.com/KDA-koh) РИМ-120906 — Тимлид, развертывание приложения на платформе Яндекс.Облако, работа с гитом
 - [Копылов Данил](https://github.com/XYPMA-11) РИМ-120906 — front end design
 - [Беззубов Артем](https://github.com/Drimkore) РИМ-120907 — Тесты, CI/CD
 
