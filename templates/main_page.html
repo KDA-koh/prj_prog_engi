@@ -2,11 +2,11 @@
 <title>Hello from Flask</title>
     <h1>Hello, World!</h1>
     <form method="POST">
-        <input name="text">
+        <input name="input_field">
         <input type="submit">
         {% if text %}
-        <textarea name="result_field">{{text}}</textarea>
+        <textarea name="output_field">{{text}}</textarea>
         {% else %}
-        <textarea name="result_field"></textarea> 
+        <textarea name="output_field"></textarea> 
         {% endif %}
     </form>
