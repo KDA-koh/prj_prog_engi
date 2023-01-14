@@ -21,3 +21,7 @@ def test_predict_star_wars(client):
 def test_predict_none(client):
     text = ''
     assert predict(text) == ''
+
+def test_predict_nums(client):
+    text = '123'
+    assert predict(text) == '123'
