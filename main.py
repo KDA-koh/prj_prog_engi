@@ -1,5 +1,6 @@
 from transformers import pipeline
 from flask import Flask,render_template,request
+import json
 
 
 app = Flask(__name__)
@@ -12,8 +13,8 @@ def hello_world():
 
 @app.route('/', methods=['POST'])
 def my_form_post():    
-    text = request.form['input_field']    
-    return render_template('main_page.html', text = predict(text))
+    text = request.form['input_field'] 
+    return json.dumps({'result': predict(text)}) 
 
 def predict(text):
     processed_text = classifier(text)[0]
